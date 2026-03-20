@@ -2,16 +2,16 @@
 Page({
   data: {
     services: [
-      { name: '到店取餐', icon: '/images/rice-bowl.png' },
-      { name: '取外卖', icon: '/images/electric-scooter.png' },
-      { name: '宠物洗护', icon: '/images/paw-print.png' },
-      { name: '宠物喂养', icon: '/images/pet-house.png' },
-      { name: '遛狗服务', icon: '/images/dog.png' },
-      { name: '维修服务', icon: '/images/wrench.png' },
-      { name: '衣物干洗', icon: '/images/washing-machine.png' },
-      { name: '送水上门', icon: '/images/water-drop.png' },
-      { name: '扔垃圾', icon: '/images/trash-bag.png' },
-      { name: '团购专区', icon: '/images/shopping-bag.png' }
+      { name: '到店取餐', icon: 'https://semhaq.github.io/community_service/images/rice-bowl.png' },
+      { name: '取外卖', icon: 'https://semhaq.github.io/community_service/images/electric-scooter.png' },
+      { name: '宠物洗护', icon: 'https://semhaq.github.io/community_service/images/paw-print.png' },
+      { name: '宠物喂养', icon: 'https://semhaq.github.io/community_service/images/pet-house.png' },
+      { name: '遛狗服务', icon: 'https://semhaq.github.io/community_service/images/dog.png' },
+      { name: '维修服务', icon: 'https://semhaq.github.io/community_service/images/wrench.png' },
+      { name: '衣物干洗', icon: 'https://semhaq.github.io/community_service/images/washing-machine.png' },
+      { name: '送水上门', icon: 'https://semhaq.github.io/community_service/images/water-drop.png' },
+      { name: '扔垃圾', icon: 'https://semhaq.github.io/community_service/images/trash-bag.png' },
+      { name: '团购专区', icon: 'https://semhaq.github.io/community_service/images/shopping-bag.png' }
     ]
   },
 

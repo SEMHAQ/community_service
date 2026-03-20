@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit -m \"Add images for GitHub Pages:*)",
+      "Bash(git rm:*)"
+    ]
+  }
+}

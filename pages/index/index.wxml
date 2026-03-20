@@ -6,7 +6,7 @@
     <text class="title-line">社区万事通</text>
     <text class="title-line second-line">解忧分分钟</text>
   </view>
-  <image class="title-image" src="/images/delivery-person.png" mode="aspectFit"></image>
+  <image class="title-image" src="https://semhaq.github.io/community_service/images/delivery-person.png" mode="aspectFit"></image>
 </view>
 
 <view class="action-button" bindtap="showOptions">
@@ -20,13 +20,13 @@
     <view class="function-row">
       <view class="function-card primary" bindtap="navigateToHelp">
         <text class="card-title">互帮互助</text>
-        <image class="card-image" src="/images/helping-hands.png" mode="aspectFit"></image>
+        <image class="card-image" src="https://semhaq.github.io/community_service/images/helping-hands.png" mode="aspectFit"></image>
         <view class="card-arrow">➤</view>
       </view>
 
       <view class="function-card" bindtap="navigateToDelivery">
         <text class="card-title">帮取快递</text>
-        <image class="card-image" src="/images/package.png" mode="aspectFit"></image>
+        <image class="card-image" src="https://semhaq.github.io/community_service/images/package.png" mode="aspectFit"></image>
         <view class="card-arrow">➤</view>
       </view>
     </view>
@@ -47,20 +47,20 @@
     <view class="discount-card" bindtap="purchaseCard" data-type="feeding">
       <text class="discount-title">喂养卡</text>
       <text class="discount-price">¥15/次</text>
-      <image class="discount-image" src="/images/pet-feeding.png" mode="aspectFit"></image>
+      <image class="discount-image" src="https://semhaq.github.io/community_service/images/pet-feeding.png" mode="aspectFit"></image>
       <button class="purchase-btn">去开卡</button>
     </view>
 
     <view class="discount-card" bindtap="purchaseCard" data-type="dryclean">
       <text class="discount-title">干洗卡</text>
       <text class="discount-price">¥25/次</text>
-      <image class="discount-image" src="/images/dry-clean.png" mode="aspectFit"></image>
+      <image class="discount-image" src="https://semhaq.github.io/community_service/images/dry-clean.png" mode="aspectFit"></image>
       <button class="purchase-btn">去开卡</button>
     </view>
   </view>
 
   <!-- 底部横幅 -->
   <view class="bottom-banner">
-  <image class="banner-image" src="/images/bottom-banner.png" mode="aspectFill"></image>
+  <image class="banner-image" src="https://semhaq.github.io/community_service/images/bottom-banner.png" mode="aspectFill"></image>
 </view>
 </scroll-view>
