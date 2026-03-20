@@ -1,1 +1,1 @@
-Just a applet.
+Just a applet
