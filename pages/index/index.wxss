@@ -104,38 +104,24 @@ page {
 
 .function-card {
   flex: 1;
-  background: linear-gradient(135deg, #42A5F5 0%, #64B5F6 100%);
+  background: transparent; /* 改为透明背景 */
   border-radius: 20rpx;
-  padding: 30rpx 20rpx;
+  padding: 0; /* 去掉内边距 */
   position: relative;
-  box-shadow: 0 4rpx 12rpx rgba(66, 165, 245, 0.3);
+  box-shadow: none; /* 去掉阴影 */
+  overflow: hidden; /* 确保图片圆角生效 */
 }
 
 .function-card.primary {
-  background: linear-gradient(135deg, #2196F3 0%, #42A5F5 100%);
+  background: transparent; /* 改为透明背景 */
 }
 
-.card-title {
-  color: #fff;
-  font-size: 32rpx;
-  font-weight: 500;
-  margin-bottom: 20rpx;
+/* 新增：卡片内图片样式 */
+.card-full-image {
+  width: 100%;
+  height: auto;
   display: block;
-}
-
-.card-image {
-  width: 80rpx;
-  height: 80rpx;
-  margin-bottom: 20rpx;
-}
-
-.card-arrow {
-  position: absolute;
-  right: 20rpx;
-  bottom: 20rpx;
-  color: #fff;
-  font-size: 24rpx;
-  font-weight: bold;
+  border-radius: 20rpx; /* 继承卡片圆角 */
 }
 
 /* 功能图标网格 */
@@ -151,25 +137,18 @@ page {
   flex-direction: column;
   align-items: center;
   padding: 20rpx 10rpx;
-  background: #fff;
-  border: 2rpx solid #E3F2FD;
-  border-radius: 16rpx;
+  background: transparent; /* 去掉白色背景 */
+  border: none; /* 去掉边框 */
+  border-radius: 0; /* 去掉圆角 */
   box-sizing: border-box;
 }
 
-.icon-wrapper {
-  width: 60rpx;
-  height: 60rpx;
-  background: linear-gradient(135deg, #E3F2FD 0%, #F5F5F5 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12rpx;
-}
+/* 移除.icon-wrapper相关样式，因为我们已经在WXML中移除了这一层 */
 
-.icon {
-  font-size: 32rpx;
+.service-icon {
+  width: 60rpx; /* 调整图标尺寸 */
+  height: 60rpx;
+  margin-bottom: 12rpx;
 }
 
 .icon-label {

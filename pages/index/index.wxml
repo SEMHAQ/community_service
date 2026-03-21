@@ -11,24 +11,21 @@
   <view class="function-section">
     <view class="function-row">
       <view class="function-card primary" bindtap="navigateToHelp">
-        <text class="card-title">互帮互助</text>
-        <image class="card-image" src="https://semhaq.github.io/community_service/images/helping-hands.png" mode="aspectFit"></image>
-        <view class="card-arrow">➤</view>
+        <!-- 顶部双大卡片改为纯图片展示，保留点击事件 -->
+        <image class="card-full-image" src="https://via.placeholder.com/400x200?text=互帮互助卡片图" mode="widthFix"></image>
       </view>
 
       <view class="function-card" bindtap="navigateToDelivery">
-        <text class="card-title">帮取快递</text>
-        <image class="card-image" src="https://semhaq.github.io/community_service/images/package.png" mode="aspectFit"></image>
-        <view class="card-arrow">➤</view>
+        <!-- 顶部双大卡片改为纯图片展示，保留点击事件 -->
+        <image class="card-full-image" src="https://via.placeholder.com/400x200?text=帮取快递卡片图" mode="widthFix"></image>
       </view>
     </view>
 
     <!-- 功能图标网格 -->
     <view class="icon-grid">
       <view class="icon-item" wx:for="{{services}}" wx:key="name" bindtap="serviceClick" data-service="{{item.name}}">
-        <view class="icon-wrapper">
-          <image class="service-icon" src="{{item.icon}}" mode="aspectFit"></image>
-        </view>
+        <!-- 移除icon-wrapper层，直接放置图标 -->
+        <image class="service-icon" src="{{item.icon}}" mode="aspectFit"></image>
         <text class="icon-label">{{item.name}}</text>
       </view>
     </view>
