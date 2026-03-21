@@ -266,34 +266,42 @@ Page({
       data: githubUrl,
       success: (res) => {
         console.log('复制成功', res);
-        // 尝试使用 showModal 替代 showToast，确保提示显示
-        wx.showModal({
+
+        // 尝试多种方式确保提示显示
+        // 方式1: showLoading
+        wx.showLoading({
           title: '链接已复制',
-          content: 'GitHub链接已成功复制',
-          showCancel: false,
-          confirmText: '知道了',
-          success: (modalRes) => {
-            console.log('提示框显示成功', modalRes);
+          mask: true
+        });
+
+        // 方式2: 同时尝试toast (双重保险)
+        wx.showToast({
+          title: '链接已复制',
+          icon: 'success',
+          duration: 1500,
+          mask: true,
+          success: (toastRes) => {
+            console.log('Toast显示成功', toastRes);
           },
-          fail: (modalRes) => {
-            console.error('提示框显示失败', modalRes);
-            // 如果 showModal 也失败，尝试 showToast
-            wx.showToast({
-              title: '链接已复制',
-              icon: 'success',
-              duration: 2000
-            });
+          fail: (toastRes) => {
+            console.error('Toast显示失败', toastRes);
           }
         });
+
+        // 3秒后隐藏loading
+        setTimeout(() => {
+          wx.hideLoading();
+        }, 3000);
       },
       fail: (res) => {
         console.error('复制失败', res);
-        wx.showModal({
+        wx.showLoading({
           title: '复制失败',
-          content: '无法复制链接，请重试',
-          showCancel: false,
-          confirmText: '知道了'
+          mask: true
         });
+        setTimeout(() => {
+          wx.hideLoading();
+        }, 3000);
       }
     });
   }

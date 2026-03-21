@@ -3,7 +3,7 @@
 <!-- 固定背景层 -->
 <view class="fixed-background"></view>
 
-<scroll-view class="scrollarea" scroll-y>
+<scroll-view class="scrollarea" scroll-y="{{false}}">
   <!-- 顶部占位空间 -->
   <view class="top-space"></view>
 

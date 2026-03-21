@@ -1,1 +1,5 @@
-<\!-- help.wxml -->\n<view class="container">\n  <text class="title">互帮互助</text>\n  <text class="content">互帮互助页面内容开发中...</text>\n</view>
+<!-- help.wxml -->
+<view class="container">
+  <text class="title">互帮互助</text>
+  <text class="content">互帮互助页面内容开发中...</text>
+</view>
