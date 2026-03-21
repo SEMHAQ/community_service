@@ -1,1 +1,0 @@
-/* help.wxss */\n.container {\n  padding: 40rpx;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n.title {\n  font-size: 48rpx;\n  font-weight: bold;\n  margin-bottom: 40rpx;\n}\n.content {\n  font-size: 28rpx;\n  color: #666;\n}
