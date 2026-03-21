@@ -255,5 +255,46 @@ Page({
   // 页面卸载
   onUnload() {
     console.log('页面卸载');
+  },
+
+  // 复制GitHub链接到剪贴板
+  openGitHub() {
+    const githubUrl = 'https://github.com/SEMHAQ/community_service';
+    console.log('开始复制GitHub链接:', githubUrl); // 调试日志
+
+    wx.setClipboardData({
+      data: githubUrl,
+      success: (res) => {
+        console.log('复制成功', res);
+        // 尝试使用 showModal 替代 showToast，确保提示显示
+        wx.showModal({
+          title: '链接已复制',
+          content: 'GitHub链接已成功复制',
+          showCancel: false,
+          confirmText: '知道了',
+          success: (modalRes) => {
+            console.log('提示框显示成功', modalRes);
+          },
+          fail: (modalRes) => {
+            console.error('提示框显示失败', modalRes);
+            // 如果 showModal 也失败，尝试 showToast
+            wx.showToast({
+              title: '链接已复制',
+              icon: 'success',
+              duration: 2000
+            });
+          }
+        });
+      },
+      fail: (res) => {
+        console.error('复制失败', res);
+        wx.showModal({
+          title: '复制失败',
+          content: '无法复制链接，请重试',
+          showCancel: false,
+          confirmText: '知道了'
+        });
+      }
+    });
   }
 });

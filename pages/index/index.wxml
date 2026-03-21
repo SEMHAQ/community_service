@@ -34,19 +34,21 @@
   <!-- 优惠区 -->
   <view class="discount-section">
     <view class="discount-card" bindtap="purchaseCard" data-type="feeding">
-      <text class="discount-title">喂养卡</text>
-      <text class="discount-price">¥15/次</text>
-      <image class="discount-image" src="https://semhaq.github.io/community_service/images/pet-feeding.png" mode="aspectFit"></image>
-      <button class="purchase-btn">去开卡</button>
+      <!-- 喂养卡图片替换 -->
+      <image class="full-card-image" src="https://semhaq.github.io/community_service/images/feed_card.png" mode="widthFix"></image>
     </view>
 
     <view class="discount-card" bindtap="purchaseCard" data-type="dryclean">
-      <text class="discount-title">干洗卡</text>
-      <text class="discount-price">¥25/次</text>
-      <image class="discount-image" src="https://semhaq.github.io/community_service/images/dry-clean.png" mode="aspectFit"></image>
-      <button class="purchase-btn">去开卡</button>
+      <!-- 干洗卡图片替换 -->
+      <image class="full-card-image" src="https://semhaq.github.io/community_service/images/wash_card.png" mode="widthFix"></image>
     </view>
   </view>
 
+
+<!-- GitHub信息区 -->
+  <view class="github-info" bindtap="openGitHub">
+    <image class="github-image" src="https://semhaq.github.io/community_service/images/github.png" mode="aspectFit"></image>
+    <text class="github-text">@SEMHAQ/community_service</text>
+  </view>
 
 </scroll-view>

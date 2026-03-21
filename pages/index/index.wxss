@@ -107,18 +107,28 @@ page {
   padding: 20rpx;
   background: transparent;
   margin-bottom: 20rpx;
+  gap: 20rpx; /* 添加卡片间距 */
 }
 
 .discount-card {
   flex: 1;
-  background: linear-gradient(135deg, #E3F2FD 0%, #F5F5F5 100%);
-  border-radius: 16rpx;
-  padding: 15rpx;
+  background: transparent; /* 透明背景 */
+  border-radius: 20rpx; /* 圆角 */
+  padding: 0; /* 移除内边距 */
   position: relative;
-  border: 2rpx solid #BBDEFB;
-  min-width: 0; /* 解决flex布局内容溢出的问题 */
+  border: none; /* 无边框 */
+  min-width: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* 确保图片圆角生效 */
+}
+
+/* 优惠卡图片样式 */
+.full-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20rpx; /* 圆角 */
 }
 
 .discount-card:first-child {
@@ -175,6 +185,30 @@ page {
   background: transparent;
   border-radius: 0;
   box-shadow: none;
+}
+
+/* GitHub信息区 */
+.github-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* 去除点击时的蓝色矩形阴影 */
+  tap-highlight-color: transparent; /* 去除点击时的蓝色矩形阴影 */
+}
+
+.github-image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
+}
+
+.github-text {
+  font-size: 24rpx;
+  color: #666666;
+  font-weight: 500;
 }
 
 .banner-image {
