@@ -28,7 +28,7 @@ page {
 }
 
 .top-space {
-  height: 500rpx; /* 顶部占位空间高度，您可以根据需要调整 */
+  height: 550rpx; /* 顶部占位空间高度，您可以根据需要调整 */
 }
 
 .function-row {
@@ -69,8 +69,8 @@ page {
 .icon-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20rpx; /* 列间距20rpx */
-  row-gap: 30rpx; /* 行间距30rpx */
+  gap: 16rpx; /* 列间距16rpx，更紧凑 */
+  row-gap: 24rpx; /* 行间距24rpx，更紧凑 */
 }
 
 .icon-item {
@@ -89,7 +89,8 @@ page {
   width: 80rpx; /* 图标尺寸80rpx * 80rpx */
   height: 80rpx;
   margin-bottom: 12rpx; /* 和文字的间距 */
-  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.05); /* 极淡的弥散阴影 */
+  background: transparent; /* 确保图标背景透明 */
+  border-radius: 0; /* 确保无圆角 */
 }
 
 .icon-label {

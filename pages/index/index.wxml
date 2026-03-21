@@ -1,4 +1,4 @@
-<navigation-bar title="社区小程序" back="{{false}}" homeButton="{{false}}" loading="{{false}}" />
+<navigation-bar title="社区服务小程序" back="{{false}}" homeButton="{{false}}" loading="{{false}}" />
 
 <!-- 固定背景层 -->
 <view class="fixed-background"></view>
