@@ -6,7 +6,7 @@ page {
 }
 
 .scrollarea {
-  flex: 1;
+  height: calc(100vh - 44px);
   overflow-y: auto;
 }
 

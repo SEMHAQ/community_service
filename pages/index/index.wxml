@@ -1,3 +1,5 @@
+<navigation-bar title="社区小程序" back="{{false}}" homeButton="{{false}}" loading="{{false}}" />
+
 <scroll-view class="scrollarea" scroll-y>
   <!-- 标题区 -->
   <view class="title-section">
@@ -61,6 +63,6 @@
 
   <!-- 底部横幅 -->
   <view class="bottom-banner">
-  <image class="banner-image" src="https://semhaq.github.io/community_service/images/bottom-banner.png" mode="aspectFill"></image>
+  <image class="banner-image" src="https://semhaq.github.io/community_service/images/bottom-banner.png" mode="widthFix"></image>
 </view>
 </scroll-view>
