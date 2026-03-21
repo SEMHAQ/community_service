@@ -2,11 +2,21 @@
 page {
   height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: #F8FBFC; /* 极淡的浅蓝色背景 */
   background-image: url('https://semhaq.github.io/community_service/images/top-banner.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* 固定背景，不滚动 */
+  background-attachment: fixed;
+}
+
+/* 新增：整体容器白色大背景 */
+.function-section {
+  background: #FFFFFF; /* 纯白色背景 */
+  border-radius: 24rpx; /* 大圆角 */
+  padding: 20rpx 20rpx 20rpx; /* 上边距20rpx，左右20rpx，底部20rpx */
+  margin: 0 20rpx 20rpx; /* 左右边距20rpx，底部20rpx */
+  box-shadow: 0 4rpx 20rpx rgba(0,0,0,0.03); /* 极柔和的弥散阴影 */
 }
 
 .scrollarea {
@@ -18,105 +28,34 @@ page {
 }
 
 .top-space {
-  height: 400rpx; /* 顶部占位空间高度，您可以根据需要调整 */
-}
-
-/* 标题区 */
-.title-section {
-  padding: 30rpx 20rpx;
-  background: #fff;
-  margin-bottom: 20rpx;
-}
-
-.main-title-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30rpx;
-}
-
-.main-title {
-  font-size: 48rpx;
-  font-weight: bold;
-  color: #000;
-  flex: 1;
-}
-
-.title-image {
-  width: 120rpx;
-  height: 120rpx;
-}
-
-.action-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
-  border-radius: 50rpx;
-  padding: 20rpx 40rpx;
-  margin-bottom: 20rpx;
-  box-shadow: 0 4rpx 12rpx rgba(25, 118, 210, 0.3);
-  position: relative;
-}
-
-.button-text {
-  color: #fff;
-  font-size: 32rpx;
-  font-weight: 500;
-}
-
-.arrow-decor {
-  position: absolute;
-  right: 20rpx;
-  color: #FFD700;
-  font-size: 24rpx;
-  font-weight: bold;
-}
-
-.hint-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8rpx;
-}
-
-.hint-icon {
-  font-size: 24rpx;
-}
-
-.hint-content {
-  font-size: 24rpx;
-  color: #999;
-}
-
-/* 功能区 */
-.function-section {
-  padding: 20rpx;
-  background: transparent;
-  margin-bottom: 20rpx;
+  height: 500rpx; /* 顶部占位空间高度，您可以根据需要调整 */
 }
 
 .function-row {
   display: flex;
   gap: 20rpx;
-  margin-bottom: 30rpx;
+  margin-bottom: 30rpx; /* 和下方网格的间距 */
+  margin-top: -60rpx; /* 向上移动更多，让卡片部分重叠在白色容器上 */
+  position: relative; /* 确保卡片在白色容器上方 */
+  z-index: 1; /* 确保卡片显示在白色容器上面 */
 }
 
 .function-card {
   flex: 1;
-  background: transparent; /* 改为透明背景 */
+  background: transparent; /* 透明背景 */
   border-radius: 20rpx;
   padding: 0; /* 去掉内边距 */
   position: relative;
   box-shadow: none; /* 去掉阴影 */
   overflow: hidden; /* 确保图片圆角生效 */
+  margin-top: -50rpx; /* 每个卡片向上移动，部分重叠在白色容器上 */
 }
 
 .function-card.primary {
-  background: transparent; /* 改为透明背景 */
+  background: transparent; /* 透明背景，两个卡片样式统一 */
 }
 
-/* 新增：卡片内图片样式 */
+/* 卡片内图片样式 */
 .card-full-image {
   width: 100%;
   height: auto;
@@ -128,33 +67,35 @@ page {
 .icon-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20rpx;
+  gap: 20rpx; /* 列间距20rpx */
+  row-gap: 30rpx; /* 行间距30rpx */
 }
 
 .icon-item {
-  width: calc(20% - 16rpx);
+  width: calc(20% - 16rpx); /* 5列布局 */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20rpx 10rpx;
-  background: transparent; /* 去掉白色背景 */
-  border: none; /* 去掉边框 */
-  border-radius: 0; /* 去掉圆角 */
+  padding: 0; /* 去掉内边距 */
+  background: transparent; /* 透明背景 */
+  border: none; /* 无边框 */
   box-sizing: border-box;
 }
 
-/* 移除.icon-wrapper相关样式，因为我们已经在WXML中移除了这一层 */
-
+/* 图标样式精准还原 */
 .service-icon {
-  width: 60rpx; /* 调整图标尺寸 */
-  height: 60rpx;
-  margin-bottom: 12rpx;
+  width: 80rpx; /* 图标尺寸80rpx * 80rpx */
+  height: 80rpx;
+  margin-bottom: 12rpx; /* 和文字的间距 */
+  box-shadow: 0 4rpx 8rpx rgba(0,0,0,0.05); /* 极淡的弥散阴影 */
 }
 
 .icon-label {
-  font-size: 24rpx;
-  color: #000;
+  font-size: 24rpx; /* 字号24rpx */
+  font-weight: 500; /* 字重500 */
+  color: #333333; /* 颜色#333333 */
   text-align: center;
+  line-height: 1.2; /* 行高1.2倍 */
 }
 
 /* 优惠区 */

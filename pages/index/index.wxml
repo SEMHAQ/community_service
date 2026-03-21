@@ -12,12 +12,12 @@
     <view class="function-row">
       <view class="function-card primary" bindtap="navigateToHelp">
         <!-- 顶部双大卡片改为纯图片展示，保留点击事件 -->
-        <image class="card-full-image" src="https://via.placeholder.com/400x200?text=互帮互助卡片图" mode="widthFix"></image>
+        <image class="card-full-image" src="https://semhaq.github.io/community_service/images/help_func.png" mode="widthFix"></image>
       </view>
 
       <view class="function-card" bindtap="navigateToDelivery">
         <!-- 顶部双大卡片改为纯图片展示，保留点击事件 -->
-        <image class="card-full-image" src="https://via.placeholder.com/400x200?text=帮取快递卡片图" mode="widthFix"></image>
+        <image class="card-full-image" src="https://semhaq.github.io/community_service/images/express_func.png" mode="widthFix"></image>
       </view>
     </view>
 
