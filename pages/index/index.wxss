@@ -61,6 +61,8 @@ page {
   height: auto;
   display: block;
   border-radius: 20rpx; /* 继承卡片圆角 */
+  margin: -10rpx; /* 图片向外扩展，让卡片看起来更大 */
+  width: calc(100% + 20rpx); /* 图片宽度增加 */
 }
 
 /* 功能图标网格 */
